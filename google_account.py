@@ -52,11 +52,13 @@ next_btn2_element.click()
 time.sleep(5)
 
 # 첫번째 이메일 라디오 버튼 클릭 후 비밀번호 입력하는 화면으로 넘어가기 (입력필드가 나올땐 어떻게 해야할까)
-radio_btn='#yDmH0d > c-wiz > div.aDGQwe > div.eKnrVb > div > div.j663ec > div > form > span > section > div > div > div.IhH7Wd.hdGwMb.V9RXW > div.ci67pc > div > span > div:nth-child(1) > div > div.enBDyd > div'
+radio_btn='#yDmH0d > c-wiz > div.aDGQwe > div.eKnrVb > div > div.j663ec > div > form > span > section > div > div > div.IhH7Wd.hdGwMb.V9RXW > div.ci67pc > div > span > div:nth-child(3) > div > div.enBDyd > div'
 driver.find_element(By.CSS_SELECTOR, radio_btn).click()
+email_field='#yDmH0d > c-wiz > div.aDGQwe > div.eKnrVb > div > div.j663ec > div > form > span > section > div > div > div.akwVEf > div.d2CFce.cDSmF > div > div.aCsJod.oJeWuf > div > div.Xb9hP > input'
+driver.find_element(By.CSS_SELECTOR, email_field).send_keys('kjsbhw051209')
 next_btn3_locater='//*[@id="next"]/div/button'
 next_btn3_element=WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH, next_btn3_locater)))
+EC.element_to_be_clickable((By.XPATH, next_btn3_locater)))
 next_btn3_element.click()
 time.sleep(5)
 
@@ -69,7 +71,7 @@ next_btn4_locater='//*[@id="createpasswordNext"]/div/button'
 next_btn4_element=WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, next_btn4_locater)))
 next_btn4_element.click()
-time.sleep(5)
+time.sleep(30)
 # '죄송합니다 계정을 만들수가 없습니다.' 오류 화면 노출
 
 #복구 이메일 추가 화면에서 건너뛰기 버튼 클릭하기
