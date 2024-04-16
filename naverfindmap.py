@@ -19,7 +19,7 @@ class SeleniumConfig:
         element = self.find_element(by, element)
         element.send_keys(contents)
 
-    def navigate_and_search(self, departure, destination):
+    def find_result(self, departure, destination):
         try:
             self.driver.get('https://map.naver.com/p?c=15.00,0,0,0,dh')
             self.find_element_click(By.CSS_SELECTOR, '#header > nav > ul > li.sc-13bg05j.jmKA-Dw > button')
